@@ -1,0 +1,7 @@
+.number :nth-child(even) {
+  font-color: red;
+}
+
+.number :nth-child(odd) {
+  background-color: #007fff;
+}
