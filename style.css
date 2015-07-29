@@ -1,7 +1,41 @@
-.number :nth-child(even) {
-  font-color: red;
+
+label {
+  font-family: 'Arial';
+  font-size: 1.25em;
 }
 
-.number :nth-child(odd) {
+.message {
+  font-family: 'Arial';
+  font-size: 1.25em; 
+  margin-top: 30px;
+}
+
+
+.number:first-of-type {
+  margin-top: 30px;
+}
+
+.number:nth-of-type(even) {
+  color: red;
+}
+
+.number:nth-of-type(odd) {
   background-color: #007fff;
+}
+
+.box {
+  width: 200px;
+  height: 17px;
+}
+
+#inputBox {
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: #ffffcc;
+}
+
+#button {
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: #ffffcc;
 }
