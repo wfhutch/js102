@@ -25,11 +25,6 @@
 */
 
 
-
-
-
-
-var newArray = [];
 var sortedArray = [];
 var newNumArray = [];
 var numbers;
@@ -37,22 +32,20 @@ var numbersArray = [];
 var button = $("#button");
 var contentEl = $("section");
 
-var sortArray = function (array) {
-  for (i=0; i<array.length; i++) {
-    newArray.push(array[i]);
-   }
-   sortedArray = newArray.sort();
-   insertDiv(sortedArray);
-};
-
 function bigNumArray(array) {
   for (i=0; i<array.length; i++) {
     if (array[i] > 25) {
       newNumArray.push(array[i]);
       }
     }
-    sortArray(newNumArray); 
+    newNumArray.sort(sortedNumber); 
+    console.log("Sorted big numbers", newNumArray);
+    insertDiv(newNumArray);
   };
+
+function sortedNumber(a,b){
+  return a - b; 
+}
 
 function insertDiv(array) {
   for (i=0; i<array.length; i++) {
@@ -69,6 +62,7 @@ function insertDiv(array) {
 button.click(function() {
   numbers = $("#inputBox").val();
   numbersArray = numbers.split(',').map(Number);
+  console.log("numArray", numbersArray);
   bigNumArray(numbersArray);
 });
 
